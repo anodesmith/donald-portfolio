@@ -31,3 +31,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# portfolio-ai-builder internals
+context.md
+state.md
+tasks.md
+rules.md
+validation.md
+recovery_check.md
+resume.md
+/phases/
+/logs/
+/outputs/
