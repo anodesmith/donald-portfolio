@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Donald Smith Ogono",
+    "subtitle": "Red Team Tool Developer | Cybersecurity Researcher",
+    "description": "Low-level offensive security researcher specializing in EDR evasion, syscall-level exploitation, and custom red team tooling.",
+    "terminal_lines": [
+      "Initializing connection...",
+      "Target: local_research_environment",
+      "Status: [CONNECTED]",
+      "Loading modules: IndirectSyscalls, ModuleStomping, StackSpoofing...",
+      "Ready for interaction."
+    ]
+  },
+  "about": {
+    "text": "Donald is a low-level offensive security researcher specializing in EDR evasion, syscall-level exploitation, and custom red team tooling. His work bridges C/C++ systems programming, Windows internals, adversarial simulation, and AI-assisted exploit development."
+  },
+  "projects": [
+    {
+      "id": "charon",
+      "name": "Project Charon",
+      "description": "Custom artifact builder and EDR bypass framework.",
+      "techniques": ["Chakra.dll injection", "Runtime syscall resolution", "Stack spoofing engine", "UUID payload staging"],
+      "details": "A sophisticated framework designed to bypass modern EDR solutions using advanced injection and obfuscation techniques."
+    },
+    {
+      "id": "rt-lab",
+      "name": "Red Team Lab",
+      "description": "Adversarial emulation and persistence research lab.",
+      "techniques": ["Persistent beacon testing", "Defender bypass", "LPE research (VSS + symlink abuse)"],
+      "details": "A controlled environment for testing persistent beacons and local privilege escalation techniques."
+    },
+    {
+      "id": "sysmon-defense",
+      "name": "Sysmon Home Defense",
+      "description": "Custom threat hunting telemetry system.",
+      "techniques": ["Custom Sysmon config", "70% noise reduction", "DNS-based C2 detection"],
+      "details": "A telemetry system optimized for high-signal threat hunting with significantly reduced false positives."
+    }
+  ],
+  "skills": {
+    "Offensive": ["Cobalt Strike", "Sliver", "Covenant", "Metasploit", "Indirect Syscalls", "Module Stomping", "Process Injection"],
+    "Defensive": ["Sysmon / ETW", "DNS-based C2 detection", "Threat hunting"],
+    "Programming": ["C", "C++", "x64 Assembly", "Python", "PowerShell"],
+    "Infrastructure": ["Windows Internals", "Linux", "Virtualization"]
+  },
+  "philosophy": {
+    "title": "Security Philosophy",
+    "principles": [
+      {
+        "name": "Adversarial Thinking",
+        "description": "Understanding the attacker's mindset is the only way to build truly resilient systems. I don't just look for bugs; I look for paths of least resistance."
+      },
+      {
+        "name": "Red/Blue Feedback Loop",
+        "description": "Offensive research should always inform defensive posture. Every exploit I develop is a lesson in how to improve detection and mitigation."
+      },
+      {
+        "name": "Responsible Disclosure",
+        "description": "Innovation in exploit development must be balanced with ethical responsibility. My goal is a more secure ecosystem through rigorous testing and coordinated disclosure."
+      }
+    ]
+  },
+  "contact": {
+    "email": "sdonald565@gmail.com",
+    "github": "github.com/anodesmith"
+  }
+}
