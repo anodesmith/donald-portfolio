@@ -1,5 +1,6 @@
 import './globals.css';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
