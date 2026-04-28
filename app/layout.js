@@ -66,7 +66,12 @@ export default function RootLayout({ children }) {
             &copy; 2026 DONALD SMITH OGONO // SECURE PORTFOLIO BUILDER
           </footer>
         </div>
+        <Analytics />
       </body>
+    </html>
+  );
+}
+body>
     </html>
   );
 }
