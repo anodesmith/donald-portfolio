@@ -5,6 +5,7 @@ import HeroTerminal from '../components/HeroTerminal';
 import ProjectCard from '../components/ProjectCard';
 import SkillsMatrix from '../components/SkillsMatrix';
 import SectionWrapper from '../components/SectionWrapper';
+import ContactForm from '../components/ContactForm';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -97,67 +98,10 @@ export default function Home() {
 
       {/* Contact Section */}
       <SectionWrapper id="contact" title="Establish Contact">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-          <div className="p-8 bg-[#141414] border border-[#333333] rounded-md flex-1 w-full">
-            <p className="text-[#a0a0a0] mb-6 font-mono text-sm italic">
-              // Secure communication channel enabled
-            </p>
-            
-            <form 
-              className="space-y-4 mb-8"
-              onSubmit={(e) => {
-                e.preventDefault();
-                // Basic sanitization logic example
-                const formData = new FormData(e.target);
-                const name = formData.get('name').replace(/[<>]/g, ''); // Simple XSS prevention
-                const message = formData.get('message').replace(/[<>]/g, '');
-                console.log('Sanitized submission:', { name, message });
-                alert('Message intercepted and processed securely (Simulation)');
-              }}
-            >
-              <div>
-                <label className="text-xs uppercase tracking-widest text-[#00c3ff] mb-2 font-mono block">Identify Self</label>
-                <input 
-                  type="text" 
-                  name="name"
-                  className="w-full bg-[#0a0a0a] border border-[#333333] p-3 text-sm font-mono text-[#e6e6e6] focus:border-[#00ff9f] outline-none"
-                  placeholder="name/alias"
-                  required
-                />
-              </div>
-              <div>
-                <label className="text-xs uppercase tracking-widest text-[#00c3ff] mb-2 font-mono block">Payload (Message)</label>
-                <textarea 
-                  name="message"
-                  className="w-full bg-[#0a0a0a] border border-[#333333] p-3 text-sm font-mono text-[#e6e6e6] focus:border-[#00ff9f] outline-none h-32"
-                  placeholder="Type your message..."
-                  required
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="w-full py-3 border border-[#00ff9f] text-[#00ff9f] font-mono text-sm uppercase tracking-widest hover:bg-[#00ff9f]/10 transition-all"
-              >
-                Transmit
-              </button>
-            </form>
-
-            <div className="space-y-4 border-t border-[#333333] pt-6">
-              <div className="flex flex-col">
-                <label className="text-xs uppercase tracking-widest text-[#00c3ff] mb-2 font-mono">Origin</label>
-                <div className="text-lg text-[#e6e6e6] font-mono underline decoration-[#333333] underline-offset-8 decoration-2">
-                  {content.contact.email}
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xs uppercase tracking-widest text-[#00c3ff] mb-2 font-mono">Terminal</label>
-                <div className="text-lg text-[#e6e6e6] font-mono underline decoration-[#333333] underline-offset-8 decoration-2">
-                  {content.contact.github}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ContactForm 
+          email={content.contact.email} 
+          github={content.contact.github} 
+        />
       </SectionWrapper>
     </div>
   );
