@@ -1,6 +1,6 @@
 'use client';
 
-import { sendEmail } from './actions';
+import { sendEmail } from '../app/actions';
 import { useState } from 'react';
 
 const ContactForm = ({ email, github }) => {
