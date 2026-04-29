@@ -1,6 +1,9 @@
 import './globals.css';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
+import CustomCursor from '../components/CustomCursor';
+import ScrollProgress from '../components/ScrollProgress';
+import CommandPalette from '../components/CommandPalette';
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -48,6 +51,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} bg-[#0a0a0a] text-[#e6e6e6] font-sans antialiased`}>
+        <CustomCursor />
+        <ScrollProgress />
+        <CommandPalette />
         <div className="min-h-screen">
           <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-[#333333] px-6 py-4">
             <div className="max-w-5xl mx-auto flex justify-between items-center">
