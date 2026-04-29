@@ -43,8 +43,18 @@ const CommandPalette = () => {
   );
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+    <>
+      {/* Mobile Trigger Button */}
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 z-[90] w-12 h-12 bg-[#141414] border border-[#00ff9f] text-[#00ff9f] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(0,255,159,0.2)] md:hidden"
+      >
+        <span className="font-mono font-bold">$</span>
+      </motion.button>
+
+      <AnimatePresence>
+        {isOpen && (
         <div className="fixed inset-0 z-[10000] flex items-start justify-center pt-[20vh] px-4">
           <motion.div
             initial={{ opacity: 0 }}

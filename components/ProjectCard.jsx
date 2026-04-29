@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isTapped, setIsTapped] = useState(false);
 
   // Simulated technical metadata
   const metadata = {
@@ -11,19 +12,23 @@ const ProjectCard = ({ project }) => {
     coverage: `${Math.floor(Math.random() * 20) + 80}% CODE_COVERAGE`
   };
 
+  const showMetadata = isHovered || isTapped;
+
   return (
     <motion.div
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      onClick={() => setIsTapped(!isTapped)}
       whileHover={{ 
         scale: 1.02,
         boxShadow: "0 0 20px rgba(0, 255, 159, 0.1)",
         borderColor: "#00ff9f"
       }}
-      className="bg-[#141414] border border-[#333333] p-6 rounded-md transition-all duration-300 group flex flex-col h-full relative overflow-hidden"
+      whileTap={{ scale: 0.98 }}
+      className="bg-[#141414] border border-[#333333] p-6 rounded-md transition-all duration-300 group flex flex-col h-full relative overflow-hidden cursor-pointer"
     >
       <AnimatePresence>
-        {isHovered && (
+        {showMetadata && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
